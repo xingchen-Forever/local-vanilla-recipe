@@ -1,0 +1,17 @@
+{
+  "lri.config.title": "本地配方注入",
+  "lri.config.forceLocalRecipes": "强制启用本地配方",
+  "lri.config.forceLocalRecipes.tip": "不管服务器发不发，都把本地已知配方视为已解锁注入。关闭 = 原版行为。",
+  "lri.config.includeModded": "包含模组配方",
+  "lri.config.includeModded.tip": "同时注入已安装模组添加的配方（不仅是原版）。",
+  "lri.config.markConflicts": "标记冲突配方",
+  "lri.config.markConflicts.tip": "本地配方与服务器同 id 但内容不同时，跳过/标记以免误导。",
+  "lri.config.skipSpecial": "跳过特殊配方",
+  "lri.config.skipSpecial.tip": "跳过没有固定展示的动态/特殊配方（如地图复制）。",
+  "lri.config.logInjection": "打印注入日志",
+  "lri.config.logInjection.tip": "每次进入世界时打印注入了多少条配方。",
+  "lri.config.on": "开",
+  "lri.config.off": "关",
+  "lri.config.save": "保存",
+  "lri.config.cancel": "取消"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "localrecipeinject",
+  "version": "${version}",
+  "name": "Local Recipe Inject",
+  "description": "把客户端本地（自带 mod / datapack）的配方注入客户端配方集，使其在 JEI/REI/EMI 等查询类 mod 中视为已解锁，绕过 1.21.2+ 服务器不再下发未解锁配方的限制。可在模组菜单里开关。",
+  "authors": [
+    "icey"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/localrecipeinject/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.icey.lri.LocalRecipeInjectClient"
+    ],
+    "modmenu": [
+      "dev.icey.lri.compat.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "localrecipeinject.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

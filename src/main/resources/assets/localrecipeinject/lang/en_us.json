@@ -1,0 +1,17 @@
+{
+  "lri.config.title": "Local Recipe Inject",
+  "lri.config.forceLocalRecipes": "Force local recipes",
+  "lri.config.forceLocalRecipes.tip": "Inject locally-known recipes regardless of what the server sends. OFF = vanilla behavior.",
+  "lri.config.includeModded": "Include modded recipes",
+  "lri.config.includeModded.tip": "Also inject recipes added by installed mods (not just vanilla).",
+  "lri.config.markConflicts": "Mark conflicting recipes",
+  "lri.config.markConflicts.tip": "When a local recipe shares an id with a server one but differs, flag/skip it to avoid misleading info.",
+  "lri.config.skipSpecial": "Skip special recipes",
+  "lri.config.skipSpecial.tip": "Skip dynamic/special recipes (e.g. map cloning) that have no fixed display.",
+  "lri.config.logInjection": "Log injection",
+  "lri.config.logInjection.tip": "Print how many recipes were injected on each world join.",
+  "lri.config.on": "ON",
+  "lri.config.off": "OFF",
+  "lri.config.save": "Save",
+  "lri.config.cancel": "Cancel"
+}

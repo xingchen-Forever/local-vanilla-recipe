@@ -1,0 +1,53 @@
+plugins {
+    // Loom 1.13.6 + Gradle 8.14：与同目录可用工程 AutoClear-1.21.11 一致的已验证组合。
+    // （1.16.x 的 Loom 元数据要求 Gradle 9.4，会触发 variant 不匹配，故不用。）
+    id 'fabric-loom' version '1.13.6'
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    // Mod Menu (TerraformersMC)
+    maven { url = "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    // Mod Menu：用于在模组菜单里挂配置入口。运行时建议有，编译期需要。
+    modImplementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 21
+    it.options.encoding = "UTF-8"
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}" }
+    }
+}

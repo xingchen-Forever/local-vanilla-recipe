@@ -1,0 +1,40 @@
+# ---- Gradle ----
+.gradle/
+build/
+out/
+classes/
+# 保留 wrapper 脚本与 jar（别人 clone 后才能直接 ./gradlew 构建）
+!gradle/wrapper/gradle-wrapper.jar
+
+# ---- Fabric / Loom ----
+run/
+runs/
+.fabric/
+remappedSrc/
+
+# ---- IntelliJ IDEA ----
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ---- Eclipse ----
+.classpath
+.project
+.settings/
+bin/
+eclipse/
+
+# ---- VS Code ----
+.vscode/
+
+# ---- Java / 日志 ----
+*.class
+*.log
+hs_err_pid*
+replay_pid*
+
+# ---- 操作系统垃圾文件 ----
+.DS_Store
+Thumbs.db
+desktop.ini
